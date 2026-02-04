@@ -1,0 +1,34 @@
+allow_remote_control yes
+
+shell_integration no-cursor
+
+background #110011
+
+#font_family      JetBrainsMono Nerd Font
+font_family Noto Sans Mono Nerd Font
+
+cursor #ffa500
+cursor_shape beam
+cursor_trail 1
+cursor_trail_color #ffa500
+
+scrollbar_track_color #330033
+scrollbar_handle_color #ffa500
+
+window_padding_width 0
+
+tab_bar_style powerline
+tab_powerline_style slanted
+
+active_tab_background #ffa500
+active_tab_foreground #330033
+inactive_tab_background #330033
+inactive_tab_foreground #ffffff
+
+# Don't intercept the following key strokes to make zsh-shift-select work.
+map ctrl+shift+left no_op
+map ctrl+shift+right no_op
+map ctrl+shift+home no_op
+map ctrl+shift+end no_op
+map ctrl+shift+r no_op
+

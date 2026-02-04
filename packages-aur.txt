@@ -1,0 +1,13 @@
+epson-inkjet-printer-escpr
+epson-printer-utility
+epsonscan2
+google-chrome
+heroic-games-launcher
+osu-lazer-bin
+polychromatic
+spotify
+spotify-adblock-git
+visual-studio-code-bin
+haguichi
+logmein-hamachi
+intellij-idea-community-edition
