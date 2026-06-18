@@ -1,9 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -82,7 +82,6 @@ plugins=(
     alias-finder
     archlinux
     catimg
-    chucknorris
     clipboard
     colored-man-pages
     colorize
@@ -113,11 +112,10 @@ plugins=(
     git-escape-magic
     git-extras
     gitfast
-    gradle 
+    gradle
     heroku
     heroku-alias
     history
-    hitchhiker
     ipfs
     isodate
     jenv
@@ -141,9 +139,7 @@ plugins=(
     python
     systemd
     qrcode
-    rand-quote
     safe-paste
-    shrink-path
     snap
     spring
     ssh
@@ -169,14 +165,8 @@ zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 # colorize
 ZSH_COLORIZE_STYLE="vim"
 
-# keychain 
+# keychain
 zstyle ':omz:plugins:keychain' agents gpg,ssh
-
-# shrink-path
-setopt prompt_subst
-PS1='%n@%m $(shrink_path -f)>'
-
-zstyle :prompt:shrink_path fish yes
 
 source $ZSH/oh-my-zsh.sh
 
@@ -212,6 +202,13 @@ PROJECT_PATHS=(~/projects ~/development ~/development/projects)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias btw="fastfetch"
+
+alias ginit="gradle init"
+alias grun="gradle run"
+alias gboot="gradle bootRun"
+alias gbuild="gradle build"
+alias gclean="gradle clean"
+alias gcbuild="gradle clean build"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -4,7 +4,6 @@
 
 These are my Arch Linux dotfiles. Feel free to use anything you want, but at your own risk.
 
-
 ## Components
 
 - [**Hyprland**](https://hypr.land/) - an independent, highly customizable, dynamic tiling Wayland compositor  
@@ -22,7 +21,6 @@ These are my Arch Linux dotfiles. Feel free to use anything you want, but at you
 - [**fastfetch**](https://github.com/fastfetch-cli/fastfetch) - a maintained, feature-rich and performance oriented, neofetch like system information tool
 - [**MControlCenter**](https://github.com/dmitry-s93/MControlCenter) - a free and open source GNU/Linux application that allows you to change the settings of MSI laptops
 
-
 ## Installation
 
 This dotfiles are based on [**GNU Stow**](https://www.gnu.org/software/stow/) and an installation shell script.
@@ -31,7 +29,7 @@ This dotfiles are based on [**GNU Stow**](https://www.gnu.org/software/stow/) an
 # arch linux
 sudo pacman -S git stow 
 
-git clone https://github.com/MiZentUi/dotfiles
+git clone https://github.com/MiZentUi/dotfiles.git
 cd dotfiles
 
 chmod +x install.sh
@@ -39,7 +37,6 @@ chmod +x install.sh
 ```
 
 > **Note**: *If you encounter symlink conflicts during installation, remove the listed directories and try again.*
-
 
 ## Post-Installation
 
@@ -52,7 +49,6 @@ git config --global init.defaultBranch main
 ```
 
 [**First-Time Git Setup** - *Pro Git book*](https://git-scm.com/book/ms/v2/Getting-Started-First-Time-Git-Setup)
-
 
 ### SSH
 
@@ -67,13 +63,11 @@ Host github.com
 
 [**OpenSSH** - *Arch Wiki*](https://wiki.archlinux.org/title/OpenSSH)
 
-
 ### Hibernation
 
 For hibernation, your swap partition must be at least as large as your RAM (*for 16GB RAM recomended 20GB swap partition*). Also, the `resume` hook is required in `/etc/mkinitcpio.conf` after `udev`.
 
 [**Power management/Suspend and hibernate** - *Arch Wiki*](https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate)
-
 
 ## References
 
@@ -85,4 +79,3 @@ For hibernation, your swap partition must be at least as large as your RAM (*for
 - [**grub2-themes**](https://github.com/vinceliuice/grub2-themes) - modern design theme for GRUB
 - [**"Activate Linux"**](https://github.com/Nycta-b424b3c7/eww_activate-linux) - widget text for Eww
 - [**cliphist**](https://github.com/sentriz/cliphist) - a wayland clipboard manager with support for multimedia; `cliphist-rofi-img.sh` sourced from this repo
-

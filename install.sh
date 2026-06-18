@@ -108,6 +108,7 @@ packages () {
         tree
         vulkan-headers
         vulkan-tools
+        weston
         xdg-desktop-portal
         xdg-desktop-portal-gnome
         xdg-desktop-portal-gtk
@@ -129,15 +130,16 @@ packages () {
         hyprcursor
         hypridle
         hyprlock
-        hyprpaper
         hyprpicker
         hyprpolkitagent
         hyprsunset
+        uswm
         
         kitty
         mako
         pavucontrol
         rofi
+        rofi-calc
         waybar
         
         cava

@@ -62,6 +62,7 @@ button:hover {
 #memory,
 #temperature,
 #network,
+#tray,
 #pulseaudio {
   padding: 0 10px;
 }

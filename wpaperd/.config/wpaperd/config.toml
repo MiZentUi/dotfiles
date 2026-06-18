@@ -2,6 +2,7 @@
 duration = "30m"
 mode = "center"
 sorting = "random"
+transition-time = 3000
 
 [any]
 path = "~/dotfiles/images/wallpapers"

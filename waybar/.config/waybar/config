@@ -1,116 +1,135 @@
 {
-  "margin-top" : 10,
+    "margin-top": 10,
     "margin-left": 10,
     "margin-right": 10,
-    "height" : 30,
+    "height": 30,
     "modules-left": [
-      "hyprland/window"
+        "hyprland/window"
     ],
     "modules-center": [
-      "hyprland/workspaces",
+        "hyprland/workspaces"
     ],
     "modules-right": [
-    "pulseaudio",
-    "network",
-    "temperature",
-    "cpu",
-    "memory",
-    "battery",
-    "clock",
+        "tray",        
+        "pulseaudio",
+        "network",
+        "temperature",
+        "cpu",
+        "memory",
+        "battery",
+        "clock"
     ],
     "hyprland/window": {
-      "format": "{}",
-      "max-length": 50,
-      "rewrite": {
-        "": "MiZentUi"
-      },
-      "separate-outputs": true,
+        "format": "{}",
+        "max-length": 60,
+        "rewrite": {
+            "": "MiZentUi"
+        },
+        "separate-outputs": true
     },
     "hyprland/workspaces": {
-      "format": "{icon}",
-      "on-click": "activate",
-      "format-icons": {
-        "active": "",
-      },
-      "sort-by-number": true,
-      "persistent-workspaces": {
-        "*": 3, // 5 workspaces by default on every monitor
-        "HDMI-A-1": 3 // but only three on HDMI-A-1
-      }
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": ""
+        },
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "*": 3,
+            "HDMI-A-1": 3
+        }
     },
     "clock": {
-      "tooltip-format": "{:%d %B %Y}\n<tt><small>{calendar}</small></tt>",
-      "format-alt": "{:%d-%m-%Y}",
-      "interval": 1,
-      "format": "{:%H:%M:%S}",
-      "calendar": {
-	"mode"          : "month",
-	"mode-mon-col":   3,
-	"on-scroll"     : 1,
-        "on-click-right": "mode",
-    	"format": {
-	   "months":     "<span color='#990099'><b>{}</b></span>",
-	   "weeks":	 "{:%U}",
-	   "weekdays":   "<b>{}</b>",
-	   "today":      "<span color='#ffa500'><b>{}</b></span>"
-	}
-      },
-      "actions": {
-	    "on-click-right": "mode",
-	    "on-click-forward": "tz_up",
-	    "on-click-backward": "tz_down",
-	    "of-scroll-up": "shift_up",
-	    "on-scroll-down": "shift_down"
-      }
+        "tooltip-format": "{:%d %B %Y}\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d-%m-%Y}",
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#990099'><b>{}</b></span>",
+                "weeks": "{:%U}",
+                "weekdays": "<b>{}</b>",
+                "today": "<span color='#ffa500'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "of-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
     },
     "cpu": {
-      "format": "  {usage}%",
-      "tooltip": false
+        "format": "  {usage}%",
+        "tooltip": false
     },
     "memory": {
-      "format": "  {}%"
+        "format": "  {}%"
     },
     "temperature": {
-      "interval": 1,
-      "critical-threshold": 80,
-      "format": "{icon} {temperatureC}°C",
-      "format-icons": ["", "", ""]
+        "interval": 1,
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
     },
     "battery": {
-      "states": {
-        "warning": 30,
-        "critical": 10
-      },
-      "interval": 1,
-      "format": "{icon}  {capacity}%",
-      "format-full": "{icon}  {capacity}%",
-      "format-charging": "  {capacity}%",
-      "format-plugged": "  {capacity}%",
-      "format-alt": "{time} {icon}",
-      "format-icons": ["", "", "", "", ""]
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "interval": 1,
+        "format": "{icon}  {capacity}%",
+        "format-full": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "network": {
-      "format-wifi": "  {signalStrength}%",
-      "format-ethernet": "{cidr}  ",
-      "tooltip-format": "{ifname} via {gwaddr} ",
-      "format-linked": "{ifname} (No IP) ",
-      "format-disconnected": " ⚠ ",
-      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "{cidr}  ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": " ⚠ ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "format-bluetooth": "{volume}% {icon}  {format_source}",
-      "format-bluetooth-muted": "  {icon}  {format_source}",
-      "format-muted": "",
-      "format-icons": {
-        "headphone": "",
-        "hands-free": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", "", ""]
-      },
-      "on-click": "pavucontrol"
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{volume}% {icon}  {format_source}",
+        "format-bluetooth-muted": "  {icon}  {format_source}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
     },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    }
 }
