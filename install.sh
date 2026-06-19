@@ -73,11 +73,13 @@ packages () {
         networkmanager
         
         acpi
+        acpid
         alsa-utils
         android-file-transfer
         android-tools
         bluetui
         bluez
+        bluez-utils
         cliphist
         cups
         fastfetch
@@ -85,30 +87,36 @@ packages () {
         grim
         htop
         mesa
+        mesa-utils
         ncdu
         net-tools
-        networkmanager-openvpn
         nvidia-open
         nvidia-prime
         nvidia-settings
         nvidia-utils
         nvtop
+        ntfs-3g
         openrgb
         openssh
         openssl
-        openvpn
+        pamixer
         pipewire
         pipewire-pulse
         pulseaudio-alsa
         rsync
+        sane
+        sane-airscan
         slurp
+        snixembed
         stow
         thermald
         tlp
         tree
         vulkan-headers
         vulkan-tools
+        vulkan-validation-layers
         weston
+        wl-clipboard
         xdg-desktop-portal
         xdg-desktop-portal-gnome
         xdg-desktop-portal-gtk
@@ -130,14 +138,16 @@ packages () {
         hyprcursor
         hypridle
         hyprlock
+        hyprpaper
         hyprpicker
         hyprpolkitagent
         hyprsunset
-        uswm
+        uwsm
         
         kitty
         mako
         pavucontrol
+        python-pywal
         rofi
         rofi-calc
         waybar
@@ -145,6 +155,7 @@ packages () {
         cava
         libreoffice-fresh
         nautilus
+        nautilus-image-converter
         qbittorrent
         vlc
         wine
@@ -155,6 +166,9 @@ packages () {
         breeze-icons
         nerd-fonts
         noto-fonts
+        noto-fonts-cjk
+        noto-fonts-emoji
+        noto-fonts-extra
         powerline-fonts
     )
     
