@@ -1,7 +1,6 @@
 epson-inkjet-printer-escpr
 epson-printer-utility
 epsonscan2
-heroic-games-launcher
 osu-lazer-bin
 polychromatic
 spotify-adblock-git
