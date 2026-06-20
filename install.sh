@@ -151,6 +151,7 @@ packages () {
         rofi
         rofi-calc
         waybar
+        wpaperd
         
         cava
         libreoffice-fresh
@@ -176,6 +177,8 @@ packages () {
         eww
         mcontrolcenter-bin
         sddm-git
+
+        python-pywalfox
         
         nerd-fonts-noto-sans-mono
         rose-pine-cursor
@@ -197,7 +200,7 @@ packages () {
     
     echo -e "$prefix Flatpak packages"
     
-    cat $pkgs_flatpak_list | xargs flatpak install
+    cat $pkgs_flatpak_list | xargs flatpak install -y
 }
 
 themes () {
@@ -217,6 +220,11 @@ themes () {
     sudo cp -f images/stars_1.jpg /usr/share/sddm/themes/sugar-candy/Backgrounds/background.jpg
 }
 
+configuring () {
+    systemctl enable sddm
+    chsh -s /usr/bin/zsh
+}
+
 usage () {
     cat <<EOF
 Usage: $(basename "$0") [option]
@@ -226,6 +234,8 @@ This script installs dotfiles, packages and themes
 Options:
   -s            Stowing only
   -p            Install packages only
+  -t            Themes only
+  -c            Configuring only
   -h            Display this help message
 EOF
     exit
@@ -241,11 +251,12 @@ if [ $# -eq 0 ]; then
     exit 0
 fi
 
-while getopts "sph" opt; do
+while getopts "sptch" opt; do
     case $opt in
         s) stowing ;;
         p) packages ;;
         t) themes ;;
+        c) configuring ;;
         h) usage ;;
         \?) echo "Unknown option" >&2; usage ;;
     esac
