@@ -2,7 +2,12 @@
 duration = "30m"
 mode = "center"
 sorting = "random"
-transition-time = 3000
+transition-time = 1000
+exec = "/home/mizentui/dotfiles/scripts/wal_toggle.sh"
+
+[default.transition.directional-wipe]
+direction = [1, 1]
+smoothness = 0.1
 
 [any]
 path = "~/dotfiles/images/wallpapers"

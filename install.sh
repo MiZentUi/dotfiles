@@ -6,6 +6,13 @@ prefix="\e[35m[###]\e[0m"
 
 mkdir -p temp
 
+check_clear () {
+    if [ ! -L "$1" ]; then
+        echo "clear $1"
+        sudo rm -f $1
+    fi
+}
+
 stowing () {
     echo -e "$prefix stowing"
     
@@ -16,11 +23,11 @@ stowing () {
         vim
         fastfetch
         hypr
+        wal
         waybar
         wpaperd
         kitty
         rofi
-        mako
         eww
         mcontrolcenter
     )
@@ -28,13 +35,13 @@ stowing () {
     stow -v -t ~ ${home_stow[@]}
     
     # etc dir
-    if [ ! -L "/etc/pacman.conf" ]; then
-        sudo rm -f /etc/pacman.conf
-    fi
-    
-    if [ ! -L "/etc/default/grub" ]; then
-        sudo rm -f /etc/default/grub
-    fi
+
+    shopt -s globstar dotglob
+
+    for file in etc/**/*; do 
+        [[ -d "$file" ]] && continue
+        check_clear "/$file"
+    done
     
     sudo stow -v -t /etc etc
     
@@ -86,6 +93,7 @@ packages () {
         flatpak
         grim
         htop
+        inetutils
         mesa
         mesa-utils
         ncdu
@@ -154,10 +162,13 @@ packages () {
         wpaperd
         
         cava
+        gnome-tweaks
         libreoffice-fresh
         nautilus
         nautilus-image-converter
         qbittorrent
+        qt5ct
+        qt6ct
         vlc
         wine
         
@@ -223,6 +234,7 @@ themes () {
 configuring () {
     systemctl enable sddm
     chsh -s /usr/bin/zsh
+    chmod +x scripts/*
 }
 
 usage () {

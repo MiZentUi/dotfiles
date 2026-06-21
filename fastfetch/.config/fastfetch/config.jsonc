@@ -216,7 +216,7 @@
             "type": "sound",
             "key": "├╴󰋋 Sound    │",
             "keyColor": "magenta",
-            "format": "{5} {3} ({2:20})"
+            "format": "{3}"
         },
         {
             "type": "custom",

@@ -1,4 +1,4 @@
-@import "colors.css";
+@import "../../.cache/wal/colors-waybar.css";
 
 * {
   font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
@@ -12,6 +12,14 @@ window#waybar {
   transition-duration: .5s;
 }
 
+tooltip {
+  background-color: @background;
+}
+
+tooltip label {
+  color: @foreground;
+}
+
 button {
   /* Use box-shadow instead of border so the text isn't offset */
   box-shadow: inset 0 -3px transparent;
@@ -23,37 +31,30 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
-}
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-  background-color: @surface2;
+  box-shadow: inset 0 -3px @foreground;
 }
 
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
-  color: #ffffff;
+  color: @foreground;
 }
-
 
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.2);
 }
 
 #workspaces button.focused {
-  background-color: @lavender;
-  box-shadow: inset 0 -3px #ffffff;
+  background-color: @color8;
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: @color8;
 }
 
 #mode {
-  background-color: #64727D;
-  box-shadow: inset 0 -3px #ffffff;
+  background-color: @color8;
+  box-shadow: inset 0 -3px @foreground;
 }
 
 #clock,
@@ -67,43 +68,43 @@ button:hover {
   padding: 0 10px;
 }
 
-#pulseaudio {
-  color: @maroon;
-}
-
-#network {
-  color: @yellow;
-}
-
-#temperature {
-  color: @sky;
-}
-
-#battery {
-  color: @green;
+#window {
+  color: @foreground;
 }
 
 #clock {
-  color: @white;
+  color: @foreground;
 }
 
-#cpu {
-  color: @blue;
+#battery {
+  color: @color1;
 }
 
 #memory {
-  color: @red;
+  color: @color2;
 }
 
-#window {
-  color: @white;
+#cpu {
+  color: @color3;
+}
+
+#temperature {
+  color: @color4;
+}
+
+#network {
+  color: @color5;
+}
+
+#pulseaudio {
+  color: @color6;
 }
 
 .modules-right,
 .modules-left,
 .modules-center {
-  background-color: @base;
-  border-radius: 5px;
+  background-color: @background;
+  border-radius: 8px;
 }
 
 .modules-right {
@@ -118,21 +119,16 @@ button:hover {
   padding: 0 10px;
 }
 
-#battery.charging,
-#battery.plugged {
-  color: @sapphire;
-}
-
 @keyframes blink {
   to {
-    color: #000000;
+    color: @background;
   }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
-  color: #ffffff;
+  background-color: @color8;
+  color: @color1;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
@@ -141,9 +137,5 @@ button:hover {
 }
 
 label:focus {
-  background-color: #000000;
-}
-
-#pulseaudio.muted {
-  color: @text;
+  background-color: @background;
 }

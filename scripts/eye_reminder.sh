@@ -2,7 +2,7 @@
 
 wait_time=$((20 * 60))
 break_time=20
-delim_size=70
+delim_size=28
 
 message="Eye break"
 
