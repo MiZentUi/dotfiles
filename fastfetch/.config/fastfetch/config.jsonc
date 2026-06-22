@@ -4,7 +4,7 @@
         "type": "small",
         "source": "arch", // search for logos: fastfetch --list-logos or --print-logos
         "color": {
-            "1": "blink_cyan",
+            "1": "blink_yellow",
             "2": "blink_blue"
         },
         "padding": {
@@ -19,8 +19,8 @@
                 "total": "─"
             },
             "color": {
-                "border": "light_cyan",
-                "total": "light_cyan"
+                "border": "@3",
+                "total": "@3"
             },
             "width": 10
         },
@@ -33,8 +33,8 @@
         },
         "separator": "",
         "color": {
-            "title": "magenta",
-            "output": "light_cyan"
+            "title": "@4",
+            "output": "@3"
         }
     },
     "modules": [
@@ -43,9 +43,9 @@
             "type": "title",
             "key": "  ",
             "keyWidth": 4,
-            "keyColor": "magenta",
+            "keyColor": "@4",
             "color": {
-                "at": "magenta"
+                "at": "@4"
             }
         },
         {
@@ -57,171 +57,171 @@
         {
             "type": "custom",
             "key": "╭─System─────┬───────────────────────────────────────────────────╮",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "host",
             "key": "├╴󰌢 PC       │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "os",
             "key": "├╴ OS       │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "wm",
             "key": "├╴ WM       │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "lm",
             "key": "├╴󰧨 LM       │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "kernel",
             "key": "├╴ Kernel   │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "bios",
             "key": "├╴ BIOS     │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "packages",
             "key": "├╴󰏖 Packages │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "font",
             "key": "├╴ Font     │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "cursor",
             "key": "├╴󰆿 Cursor   │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "uptime",
             "key": "├╴ Uptime   │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "command",
             "key": "├╴󱦟 OS Age   │",
-            "keyColor": "magenta",
+            "keyColor": "@4",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s);    days_difference=$(( (current - birth_install) / 86400 )); echo $days_difference days"
         },
         {
             "type": "custom",
             "key": "╰────────────┴───────────────────────────────────────────────────╯",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "custom",
             "key": "╭─Terminal───┬───────────────────────────────────────────────────╮",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "shell",
             "key": "├╴ Shell    │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "terminal",
             "key": "├╴ Terminal │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "terminalfont",
             "key": "├╴ Font     │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "terminalsize",
             "key": "├╴󰘖 Size     │",
-            "keyColor": "magenta",
+            "keyColor": "@4",
             "format": "{1} colums × {2} rows ({3}px × {4}px)"
         },
         {
             "type": "custom",
             "key": "╰────────────┴───────────────────────────────────────────────────╯",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "custom",
             "key": "╭─Hardware───┬───────────────────────────────────────────────────╮",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "display",
             "key": "├╴󰍹 Display  │",
-            "keyColor": "magenta",
+            "keyColor": "@4",
             "format": "{1}×{2}, {3}Hz [{7}]"
         },
         {
             "type": "cpu",
             "key": "├╴ CPU      │",
-            "keyColor": "magenta",
+            "keyColor": "@4",
             "format": "{1} [{3} cores]"
         },
         {
             "type": "gpu",
             "key": "├╴󰾲 GPU      │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "memory",
             "key": "├╴ RAM      │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "disk",
             "key": "├╴ Disk     │",
-            "keyColor": "magenta",
+            "keyColor": "@4",
             "format": "{13} {1} / {2} ({3})"
         },
         {
             "type": "battery",
             "key": "├╴ Battery  │",
-            "keyColor": "magenta",
+            "keyColor": "@4",
             "format": "{10} {4} ({5})"
         },
         {
             "type": "custom",
             "key": "╰────────────┴───────────────────────────────────────────────────╯",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "colors",
             "key": "╭─Media──────┬───────────────────────────────────────────────────╮",
-            "keyColor": "magenta",
+            "keyColor": "@4",
             "symbol": "diamond"
         },
         {
             "type": "media",
             "key": "├╴ Playing  │",
-            "keyColor": "magenta",
+            "keyColor": "@4",
             "format": "\"{1}\" - {#1}{3}{#}"
         },
         {
             "type": "player",
             "key": "├╴󰥠 Player   │",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         },
         {
             "type": "sound",
             "key": "├╴󰋋 Sound    │",
-            "keyColor": "magenta",
+            "keyColor": "@4",
             "format": "{3}"
         },
         {
             "type": "custom",
             "key": "╰────────────┴───────────────────────────────────────────────────╯",
-            "keyColor": "magenta"
+            "keyColor": "@4"
         }
     ]
 }

@@ -1,0 +1,37 @@
+[config.wallpaper]
+command = "wpaperctl"
+arguments = ["set"]
+set = false
+
+[templates.waybar]
+input_path = './templates/waybar-colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.rofi]
+input_path = './templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors/matugen.rasi'
+
+[templates.mako]
+input_path = './templates/mako'
+output_path = '~/.config/mako/mako-colors'
+post_hook = 'makoctl reload'
+
+[templates.kitty]
+input_path = './templates/kitty-colors.conf'
+output_path = '~/.config/kitty/themes/Matugen.conf'
+post_hook = "kitty +kitten themes --reload-in=all Matugen"
+
+[templates.telegram]
+input_path = './templates/telegram.tdesktop-theme'
+output_path = '~/.cache/matugen/telegram.tdesktop-theme'
+
+# VS Code matugen extension
+[templates.vscode-raw]
+input_path = './templates/vscode-colors'
+output_path = '~/.cache/matugen/vscode-colors'
+
+[templates.vscode-json]
+input_path = './templates/vscode-colors.json'
+output_path = '~/.cache/matugen/vscode-colors.json'
+

@@ -19,17 +19,19 @@ stowing () {
     # home dir
     
     home_stow=(
-        zsh
-        vim
+        eww
         fastfetch
         hypr
+        kitty
+        mako
+        matugen
+        mcontrolcenter
+        rofi
+        vim
         wal
         waybar
         wpaperd
-        kitty
-        rofi
-        eww
-        mcontrolcenter
+        zsh
     )
     
     stow -v -t ~ ${home_stow[@]}
@@ -155,7 +157,6 @@ packages () {
         kitty
         mako
         pavucontrol
-        python-pywal
         rofi
         rofi-calc
         waybar
@@ -188,8 +189,6 @@ packages () {
         eww
         mcontrolcenter-bin
         sddm-git
-
-        python-pywalfox
         
         nerd-fonts-noto-sans-mono
         rose-pine-cursor

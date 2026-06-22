@@ -15,4 +15,3 @@ grpcurl-bin
 postman-bin
 kotlin-lsp-bin
 kotlin-debug-adapter-bin
-walogram-git
