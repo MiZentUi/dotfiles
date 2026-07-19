@@ -13,7 +13,7 @@ enable_touchpad() {
 
 	notify-send -u normal "Enabling Touchpad" -t 1000
 
-	hyprctl keyword "device[$HYPRLAND_DEVICE]:enabled" true
+	hyprctl eval "hl.device( {name = \"$HYPRLAND_DEVICE\", enabled = true} )"
 }
 
 disable_touchpad() {
@@ -21,7 +21,7 @@ disable_touchpad() {
 
 	notify-send -u normal "Disabling Touchpad" -t 1000
 
-	hyprctl keyword "device[$HYPRLAND_DEVICE]:enabled" false
+	hyprctl eval "hl.device( {name = \"$HYPRLAND_DEVICE\", enabled = false} )"
 }
 
 if ! [ -f "$STATUS_FILE" ]; then
