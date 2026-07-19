@@ -7,7 +7,7 @@
 
 window#waybar {
   background-color: rgba(0, 0, 0, 0);
-  border-radius: 13px;
+  border-radius: 8px;
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -104,7 +104,7 @@ button:hover {
 .modules-left,
 .modules-center {
   background-color: @background;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .modules-right {
