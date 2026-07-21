@@ -19,16 +19,19 @@ stowing () {
     # home dir
     
     home_stow=(
+        cava
         eww
         fastfetch
+        gtk
         hypr
         kitty
         mako
         matugen
         mcontrolcenter
+        qtct
         rofi
+        spicetify
         vim
-        wal
         waybar
         wpaperd
         zsh
@@ -36,19 +39,19 @@ stowing () {
     
     stow -v -t ~ ${home_stow[@]}
     
-    # etc dir
+    # scripts
+    mkdir ~/.local/bin
+    stow -v -t ~/.local/bin scripts
 
+    # etc dir
     shopt -s globstar dotglob
 
     for file in etc/**/*; do 
         [[ -d "$file" ]] && continue
         check_clear "/$file"
     done
-    
+
     sudo stow -v -t /etc etc
-    
-    # scripts
-    sudo stow -v -t /usr/local/bin scripts
     
     # sddm
     sudo stow -v --ignore="theme.txt" -t /etc sddm
@@ -167,6 +170,7 @@ packages () {
         libreoffice-fresh
         nautilus
         nautilus-image-converter
+        obs-studio
         qbittorrent
         qt5ct
         qt6ct
@@ -189,6 +193,7 @@ packages () {
         eww
         mcontrolcenter-bin
         sddm-git
+        spicetify-cli
         
         nerd-fonts-noto-sans-mono
         rose-pine-cursor
@@ -214,8 +219,10 @@ packages () {
 }
 
 themes () {
+    # wpaperd with matugen
+    wpaperctl reload
+
     # GRUB theme
-    
     echo -e "$prefix grub theme installation"
     
     git -C temp/grub2-themes pull || git clone https://github.com/vinceliuice/grub2-themes.git temp/grub2-themes
@@ -223,7 +230,6 @@ themes () {
     
     
     # SDDM theme
-    
     echo -e "$prefix sddm theme configuration"
     
     sudo cp -f sddm/theme.conf /usr/share/sddm/themes/sugar-candy/
@@ -232,7 +238,9 @@ themes () {
 
 configuring () {
     systemctl enable sddm
+
     chsh -s /usr/bin/zsh
+
     chmod +x scripts/*
 }
 
