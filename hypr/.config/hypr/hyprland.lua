@@ -155,7 +155,7 @@ hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1 }
 hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 
 -- Default springs
-hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+hl.curve("easy", { type = "spring", mass = 1, stiffness = 235, dampening = 25 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
@@ -291,14 +291,36 @@ hl.bind(mainMod .. " + TAB", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("Print", hl.dsp.exec_cmd("grim -g \"$(slurp -d; sleep 0.2)\" - | wl-copy"))
 
 -- Screen zoom
-hl.bind(mainMod .. " + KP_ADD",
-  hl.dsp.exec_cmd(
-    "hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {factor = $2 + 0.5; if (factor > 5) factor = 5; print factor}')"))
-hl.bind(mainMod .. " + KP_SUBTRACT",
-  hl.dsp.exec_cmd(
-    "hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {factor = $2 - 0.5; if (factor < 1) factor = 1; print factor}')"))
-hl.bind(mainMod .. " + SHIFT + KP_ADD", hl.dsp.exec_cmd("hyprctl keyword cursor:zoom_factor 1"))
-hl.bind(mainMod .. " + SHIFT + KP_SUBTRACT", hl.dsp.exec_cmd("hyprctl keyword cursor:zoom_factor 1"))
+
+local zoom = 1.0
+
+local function update_zoom()
+  hl.config({
+    cursor = {
+      zoom_factor = zoom,
+    },
+  })
+end
+
+hl.bind(mainMod .. " + KP_ADD", function()
+  zoom = math.min(zoom * 1.5, 10)
+  update_zoom()
+end)
+
+hl.bind(mainMod .. " + KP_SUBTRACT", function()
+  zoom = math.max(zoom / 1.5, 1)
+  update_zoom()
+end)
+
+hl.bind(mainMod .. " + SHIFT + KP_ADD", function()
+  zoom = 1
+  update_zoom()
+end)
+
+hl.bind(mainMod .. " + SHIFT + KP_SUBTRACT", function()
+  zoom = 1
+  update_zoom()
+end)
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
