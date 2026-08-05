@@ -13,6 +13,7 @@ These are my Arch Linux dotfiles. Feel free to use anything you want, but at you
 - [**Hypr Ecosystem**](https://wiki.hypr.land/Hypr-Ecosystem/) - a collection of various hypr* projects
 - [**Waybar**](https://waybar.org/) - a highly customizable Wayland bar for Sway and Wlroots based compositors
 - [**wpaperd**](https://github.com/danyspin97/wpaperd) - modern wallpaper daemon for Wayland
+- [**hyprquickpaper**](https://github.com/MiZentUi/hyprquickpaper) - wallpaper selector made using quickshell
 - [**matugen**](https://github.com/InioX/matugen) - a cross-platform material you and base16 color generation tool
 - [**rofi**](https://github.com/davatorium/rofi) - a window switcher, application launcher and dmenu replacement
 - [**kitty**](https://sw.kovidgoyal.net/kitty/) - a fast, feature-rich, GPU based terminal emulator

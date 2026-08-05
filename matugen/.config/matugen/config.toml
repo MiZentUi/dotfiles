@@ -20,6 +20,10 @@ output_path = '~/.config/hypr/colors.conf'
 input_path = './templates/rofi-colors.rasi'
 output_path = '~/.config/rofi/colors/matugen.rasi'
 
+[templates.hyprquickpaper]
+input_path = './templates/hyprquickpaper-colors.json'
+output_path = '~/.config/quickshell/hyprquickpaper/colors.json'
+
 [templates.mako]
 input_path = './templates/mako'
 output_path = '~/.config/mako/mako-colors'

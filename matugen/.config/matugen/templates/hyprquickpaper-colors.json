@@ -1,0 +1,3 @@
+{
+    "border_color": "{{ colors.primary.default.hex }}"
+}

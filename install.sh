@@ -28,6 +28,7 @@ stowing () {
         mako
         matugen
         mcontrolcenter
+        quickshell
         qtct
         rofi
         spicetify
@@ -40,7 +41,7 @@ stowing () {
     stow -v -t ~ ${home_stow[@]}
     
     # scripts
-    mkdir ~/.local/bin
+    mkdir -p ~/.local/bin
     stow -v -t ~/.local/bin scripts
 
     # etc dir
