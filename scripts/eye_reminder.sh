@@ -7,14 +7,14 @@ delim_size=38
 message="Eye break"
 
 function action() {
-    NID=$(notify-send "$message$(printf "%${delim_size}s" $break_time)" -t $((break_time * 1000)) -p)
+    NID=$(notify-send "$message$(printf "%${delim_size}s" $break_time)" -t $((break_time * 1000)) -p -h int:value:0)
     pw-play /usr/share/sounds/freedesktop/stereo/service-login.oga &
     for i in $(seq $(($break_time - 1)) -1 1); do
         sleep 1
-	    NID=$(notify-send -p -r $NID "$message$(printf "%${delim_size}s" $i)")
+	    NID=$(notify-send -p -r $NID "$message$(printf "%${delim_size}s" $i)" -h int:value:$(((break_time - i) * (100 / break_time))))
     done
     sleep 1
-    notify-send -r $NID "$message$(printf "%${delim_size}s" "done")" -t $((3 * 1000))
+    notify-send -r $NID "$message$(printf "%${delim_size}s" "done")" -t $((3 * 1000)) -h int:value:100
     pw-play /usr/share/sounds/freedesktop/stereo/service-logout.oga &
 }
 

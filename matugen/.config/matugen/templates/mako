@@ -3,7 +3,7 @@
 background-color={{colors.surface.default.hex}}
 text-color={{colors.primary.default.hex}}
 border-color={{colors.secondary.default.hex}}
-progress-color=over {{colors.primary.default.hex}}
+progress-color={{colors.primary_container.default.hex}}
 # Per-mode settings
 
 [mode=do-not-disturb]
