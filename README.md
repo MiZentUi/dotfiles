@@ -1,7 +1,6 @@
 # MiZentUi's dotfiles
 
 ![rice](images/rice.png)
-![rice](images/rice.gif)
 
 These are my Arch Linux dotfiles. Feel free to use anything you want, but at your own risk.
 
