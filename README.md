@@ -2,6 +2,8 @@
 
 ![rice](images/rice.png)
 
+https://github.com/user-attachments/assets/ad510a1d-8d5b-44e7-8f32-7c0f1444ceb9
+
 These are my Arch Linux dotfiles. Feel free to use anything you want, but at your own risk.
 
 *Supports automatic Matugen theming based on the current desktop wallpaper.*
