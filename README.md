@@ -9,20 +9,20 @@ These are my Arch Linux dotfiles. Feel free to use anything you want, but at you
 
 ## Components
 
-- [**Hyprland**](https://hypr.land/) - an independent, highly customizable, dynamic tiling Wayland compositor  
-- [**Hypr Ecosystem**](https://wiki.hypr.land/Hypr-Ecosystem/) - a collection of various hypr* projects
-- [**Waybar**](https://waybar.org/) - a highly customizable Wayland bar for Sway and Wlroots based compositors
+- [**Hyprland**](https://hypr.land) - an independent, highly customizable, dynamic tiling Wayland cwompositor  
+- [**Hypr Ecosystem**](https://wiki.hypr.land/Hypr-Ecosystem) - a collection of various hypr* projects
+- [**Waybar**](https://waybar.org) - a highly customizable Wayland bar for Sway and Wlroots based compositors
 - [**wpaperd**](https://github.com/danyspin97/wpaperd) - modern wallpaper daemon for Wayland
 - [**hyprquickpaper**](https://github.com/MiZentUi/hyprquickpaper) - wallpaper selector made using quickshell
 - [**matugen**](https://github.com/InioX/matugen) - a cross-platform material you and base16 color generation tool
 - [**rofi**](https://github.com/davatorium/rofi) - a window switcher, application launcher and dmenu replacement
-- [**kitty**](https://sw.kovidgoyal.net/kitty/) - a fast, feature-rich, GPU based terminal emulator
+- [**kitty**](https://sw.kovidgoyal.net/kitty) - a fast, feature-rich, GPU based terminal emulator
 - [**mako**](https://github.com/emersion/mako) - a lightweight Wayland notification daemon
 - [**Eww**](https://github.com/elkowar/eww) - a standalone widget system made in Rust that allows you to implement your own, custom widgets in any window manager
 - [**SDDM**](https://github.com/sddm/sddm) - a QML based X11 and Wayland display manager
-- [**GRUB**](https://www.gnu.org/software/grub/) - a Multiboot boot loader
-- [**Zsh**](https://www.zsh.org/) - a shell designed for interactive use with [Oh My ZSH!](https://ohmyz.sh/) framework
-- [**Vim**](https://www.vim.org/) - the ubiquitous text editor
+- [**GRUB**](https://www.gnu.org/software/grub) - a Multiboot boot loader
+- [**Zsh**](https://www.zsh.org) - a shell designed for interactive use with [Oh My ZSH!](https://ohmyz.sh) framework
+- [**Vim**](https://www.vim.org) - the ubiquitous text editor
 - [**fastfetch**](https://github.com/fastfetch-cli/fastfetch) - a maintained, feature-rich and performance oriented, neofetch like system information tool
 - [**cava**](https://github.com/karlstav/cava) - cross-platform audio visualizer
 - [**Spicetify**](https://spicetify.app) - the powerful CLI that takes control of the Spotify client.
@@ -30,7 +30,7 @@ These are my Arch Linux dotfiles. Feel free to use anything you want, but at you
 
 ## Installation
 
-This dotfiles are based on [**GNU Stow**](https://www.gnu.org/software/stow/) and an installation shell script.
+This dotfiles are based on [**GNU Stow**](https://www.gnu.org/software/stow) and an installation shell script.
 
 ```shell
 # arch linux
@@ -107,4 +107,7 @@ For hibernation, your swap partition must be at least as large as your RAM (*for
 - [**cliphist**](https://github.com/sentriz/cliphist) - a wayland clipboard manager with support for multimedia; `cliphist-rofi-img.sh` sourced from this repo
 - [**"Activate Linux"**](https://github.com/Nycta-b424b3c7/eww_activate-linux) - widget text for Eww
 - [**Harshwardhan Patil's .dotfiles**](https://github.com/harsh-m-patil/.dotfiles) - used as a base for the initial Waybar configuration
-- [**Sevenix2 Wallpapers**](https://www.reddit.com/user/Sevenix2/) - Genshin Impact wallpapers by Sevenix2
+- [**greenmmaple17 Wallpapers**](https://www.deviantart.com/greenmapple17) - anime minimalist wallpapers by greenmapple17
+- [**Max028 Wallpapers**](https://www.deviantart.com/max028) - anime minimalist wallpapers by Max028
+- [**Dave020626 Wallpapers**](https://www.deviantart.com/dave020626) - anime minimalist wallpapers by Dave020626
+- [**Sevenix2 Wallpapers**](https://www.reddit.com/user/Sevenix2) - Genshin Impact wallpapers by Sevenix2

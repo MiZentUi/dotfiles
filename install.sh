@@ -234,7 +234,7 @@ themes () {
     echo -e "$prefix sddm theme configuration"
     
     sudo cp -f sddm/theme.conf /usr/share/sddm/themes/sugar-candy/
-    sudo cp -f images/stars_1.jpg /usr/share/sddm/themes/sugar-candy/Backgrounds/background.jpg
+    sudo cp -f images/meteor.jpg /usr/share/sddm/themes/sugar-candy/Backgrounds/background.jpg
 }
 
 configuring () {
