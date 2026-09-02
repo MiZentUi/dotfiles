@@ -1,0 +1,3 @@
+[submodule "quickshell/.config/quickshell/hyprquickpaper"]
+	path = quickshell/.config/quickshell/hyprquickpaper
+	url = https://github.com/MiZentUi/hyprquickpaper

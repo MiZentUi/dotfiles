@@ -5,7 +5,6 @@ catimg
 clang
 cmake
 direnv
-discord
 docker
 docker-buildx
 docker-compose
@@ -58,5 +57,6 @@ texlive-pstricks
 texlive-publishers
 texlive-xetex
 traceroute
+vesktop
 wev
 yazi

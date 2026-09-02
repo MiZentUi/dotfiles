@@ -1,8 +1,0 @@
-{
-    "wallpaper_path": "$HOME/dotfiles/images/wallpapers/",
-    "cache_path": "$HOME/.cache/quickshell/hyprquickpaper/",
-    "number_of_pictures": 6,
-    "cache_batch_size": 20,
-    "height": 500,
-    "x_factor": -0.25
-}
