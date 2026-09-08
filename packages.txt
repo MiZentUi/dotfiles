@@ -57,6 +57,5 @@ texlive-pstricks
 texlive-publishers
 texlive-xetex
 traceroute
-vesktop
 wev
 yazi

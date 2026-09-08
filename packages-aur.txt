@@ -4,6 +4,7 @@ epsonscan2
 osu-lazer-bin
 polychromatic
 spotify-adblock-git
+vesktop
 visual-studio-code-bin
 haguichi
 logmein-hamachi
