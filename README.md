@@ -37,7 +37,7 @@ This dotfiles are based on [**GNU Stow**](https://www.gnu.org/software/stow) and
 # arch linux
 sudo pacman -S git stow 
 
-git clone https://github.com/MiZentUi/dotfiles.git
+git clone --recurse-submodules https://github.com/MiZentUi/dotfiles.git
 cd dotfiles
 
 chmod +x install.sh

@@ -96,10 +96,12 @@ packages () {
         cliphist
         cups
         fastfetch
-        flatpak
+        file
         grim
         htop
         inetutils
+        imagemagick
+        jq
         mesa
         mesa-utils
         ncdu
@@ -163,6 +165,7 @@ packages () {
         pavucontrol
         rofi
         rofi-calc
+        quickshell
         waybar
         wpaperd
         
@@ -213,10 +216,6 @@ packages () {
     echo -e "$prefix AUR packages"
     
     yay -Syu --sudoloop --noconfirm --needed ${base_pkgs_aur[@]} ${software_pkgs_aur[@]} - < $pkgs_aur_list
-    
-    echo -e "$prefix Flatpak packages"
-    
-    cat $pkgs_flatpak_list | xargs flatpak install -y
 }
 
 themes () {
